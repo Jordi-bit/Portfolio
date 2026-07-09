@@ -1,0 +1,31 @@
+# Entornos Virtuales
+venv/
+env/
+ENV/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+
+# IDEs y Editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Archivos personales o sensibles (añade aquí lo que necesites)
+# Ejemplo: cv-personal.pdf
+# static/img/fotografia-personal.jpg

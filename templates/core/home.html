@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section id="inicio" class="hero-section">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">Hola, soy <span class="highlight">Jordi Martin</span></h1>
+            <h2 class="hero-subtitle">Junior Software Developer</h2>
+            <p class="hero-tagline">Especializado en <span class="tech-tag">Python</span>,<span class="tech-tag">JavaScript</span> ,<span class="tech-tag">Linux</span> y <span class="tech-tag">Ciberseguridad</span></p>
+            <p class="hero-description">
+                Después de muchos años trabajando en el sector de la construcción, he reorientado mi carrera profesional hacia el desarrollo de software y la administración de sistemas mediante certificados profesionales, proyectos personales y aprendizaje continuo.
+            </p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+                <a href="#" class="btn btn-outline">Descargar CV</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <div class="profile-frame">
+                <!-- Espacio preparado para fotografía profesional -->
+                <div class="image-placeholder">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE MI -->
+<section id="sobre-mi" class="section">
+    <div class="container">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Durante gran parte de mi vida he trabajado en el sector de la construcción. Con el tiempo decidí reorientar mi carrera profesional hacia la informática, una de mis grandes aficiones.</p>
+                <p>Desde entonces he obtenido certificados profesionales de nivel 3 en programación y ciberseguridad y he desarrollado distintos proyectos personales utilizando Python, SQL, Linux, Raspberry Pi entre otras tecnologías.</p>
+                
+                <div class="about-skills">
+                    <div class="skill-pill"><i class="fas fa-brain"></i> Capacidad de aprendizaje</div>
+                    <div class="skill-pill"><i class="fas fa-puzzle-piece"></i> Resolución de problemas</div>
+                    <div class="skill-pill"><i class="fas fa-briefcase"></i> Experiencia laboral sólida</div>
+                    <div class="skill-pill"><i class="fas fa-sync-alt"></i> Adaptación a nuevas tecnologías</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TECNOLOGIAS -->
+<section id="tecnologias" class="section bg-alt">
+    <div class="container">
+        <h2 class="section-title">Tecnologías</h2>
+        <div class="tech-grid">
+            <div class="tech-card"><i class="fab fa-java tech-icon"></i><span>Java</span></div>
+            <div class="tech-card"><i class="fas fa-database tech-icon"></i><span>MySQL</span></div>
+            <div class="tech-card"><i class="fab fa-git-alt tech-icon"></i><span>Git</span></div>
+            <div class="tech-card"><i class="fab fa-github tech-icon"></i><span>GitHub</span></div>
+            <div class="tech-card"><i class="fab fa-linux tech-icon"></i><span>Linux</span></div>
+            <div class="tech-card"><i class="fab fa-html5 tech-icon"></i><span>HTML5</span></div>
+            <div class="tech-card"><i class="fab fa-css3-alt tech-icon"></i><span>CSS3</span></div>
+            <div class="tech-card"><i class="fab fa-js tech-icon"></i><span>JavaScript</span></div>
+            <div class="tech-card"><i class="fab fa-python tech-icon"></i><span>Python</span></div>
+            <div class="tech-card"><i class="fab fa-raspberry-pi tech-icon"></i><span>Raspberry Pi</span></div>
+            <div class="tech-card"><i class="fas fa-shield-alt tech-icon"></i><span>Ciberseguridad</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" class="section">
+    <div class="container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        
+        <div class="projects-grid">
+            <!-- Proyecto 1 -->
+            <article class="project-card">
+                <div class="project-img-container">
+                    <div class="project-img-placeholder"><i class="fas fa-map-marked-alt"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">GeoMedia</h3>
+                    <p class="project-desc">Aplicación para gestionar fotografías y vídeos asociados a ubicaciones geográficas mediante mapas.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check text-primary"></i> Organización por fechas</li>
+                        <li><i class="fas fa-check text-primary"></i> Información de localización precisa</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">MapAPI</span>
+                    </div>
+                    <div class="project-learning">
+                        <strong>Aprendizaje:</strong> Gestión de metadatos, integración de APIs de mapas y manejo de archivos multimedia.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="project-card">
+                <div class="project-img-container">
+                    <div class="project-img-placeholder"><i class="fas fa-gamepad"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Kits-Arcade</h3>
+                    <p class="project-desc">Proyecto relacionado con sistemas arcade y emulación clásica.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check text-primary"></i> Arquitectura de sistema</li>
+                        <li><i class="fas fa-check text-primary"></i> Solución de problemas de hardware/software</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge">Linux</span>
+                        <span class="tech-badge">Bash</span>
+                    </div>
+                    <div class="project-learning">
+                        <strong>Aprendizaje:</strong> Configuración profunda de sistemas basados en Linux y scripting.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="project-card">
+                <div class="project-img-container">
+                    <div class="project-img-placeholder"><i class="fas fa-network-wired"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">CyberSecurity Tree</h3>
+                    <p class="project-desc">Proyecto enfocado en la categorización y análisis de vulnerabilidades y defensa.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check text-primary"></i> Mapas de conocimiento</li>
+                        <li><i class="fas fa-check text-primary"></i> Funcionalidades de auditoría</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Security Tools</span>
+                    </div>
+                    <div class="project-learning">
+                        <strong>Aprendizaje:</strong> Entendimiento de vectores de ataque y metodologías de defensa estructurada.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="github-more">
+            <p>Más proyectos disponibles en GitHub</p>
+            <a href="https://github.com/jordi-bit" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> Visitar GitHub</a>
+        </div>
+    </div>
+</section>
+
+<!-- LABORATORIO RASPBERRY PI -->
+<section id="laboratorio" class="section bg-alt lab-section">
+    <div class="container">
+        <h2 class="section-title">Raspberry Pi Home Server Lab</h2>
+        <div class="lab-content">
+            <div class="lab-diagram">
+                <div class="diagram-node">Internet</div>
+                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="diagram-node">Router</div>
+                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="diagram-node highlight-node">Raspberry Pi 3B+</div>
+                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="diagram-node">Docker</div>
+                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="diagram-node">Nginx</div>
+                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="diagram-node">Aplicaciones (Django)</div>
+            </div>
+            <div class="lab-info">
+                <h3>Infraestructura Self-Hosted</h3>
+                <ul class="lab-features">
+                    <li><i class="fab fa-linux"></i> Servidor Linux dedicado</li>
+                    <li><i class="fas fa-terminal"></i> Administración remota vía SSH</li>
+                    <li><i class="fab fa-docker"></i> Contenerización y Git</li>
+                    <li><i class="fas fa-server"></i> Despliegue de aplicaciones</li>
+                    <li><i class="fas fa-globe"></i> Dominio propio y HTTPS (Let's Encrypt)</li>
+                    <li><i class="fas fa-database"></i> Copias de seguridad automatizadas</li>
+                    <li><i class="fas fa-tools"></i> Mantenimiento y monitorización</li>
+                </ul>
+                <a href="#" class="btn btn-primary mt-4"><i class="fas fa-file-pdf"></i> Ver documentación completa PDF</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICADOS -->
+<section id="certificados" class="section">
+    <div class="container">
+        <h2 class="section-title">Certificados</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-header">
+                    <span class="cert-level">Nivel 3</span>
+                    <i class="fas fa-certificate cert-icon"></i>
+                </div>
+                <h3 class="cert-title">Programación Orientada a Objetos y Bases de Datos</h3>
+                <div class="cert-details">
+                    <p><strong>Centro:</strong> (Centro de Formación)</p>
+                    <p><strong>Año:</strong> 2023</p>
+                </div>
+                <a href="#" class="btn btn-outline btn-sm mt-3">Ver certificado</a>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-header">
+                    <span class="cert-level">Nivel 3</span>
+                    <i class="fas fa-shield-alt cert-icon"></i>
+                </div>
+                <h3 class="cert-title">Seguridad Informática (Ciberseguridad)</h3>
+                <div class="cert-details">
+                    <p><strong>Centro:</strong> (Centro de Formación)</p>
+                    <p><strong>Año:</strong> 2024</p>
+                </div>
+                <a href="#" class="btn btn-outline btn-sm mt-3">Ver certificado</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCIA & METODOLOGÍA -->
+<section id="experiencia" class="section bg-alt">
+    <div class="container">
+        <div class="exp-grid">
+            <div class="exp-card">
+                <h2 class="section-title text-left">Experiencia Profesional</h2>
+                <div class="exp-content">
+                    <h3>Profesional del sector construcción</h3>
+                    <p class="exp-years">Más de 20 años de experiencia</p>
+                    <p class="exp-desc">Mi trayectoria previa me ha proporcionado una base sólida de habilidades transversales fundamentales para cualquier entorno profesional:</p>
+                    <ul class="exp-skills">
+                        <li><i class="fas fa-users"></i> Trabajo en equipo</li>
+                        <li><i class="fas fa-clipboard-check"></i> Responsabilidad</li>
+                        <li><i class="fas fa-wrench"></i> Resolución de problemas</li>
+                        <li><i class="fas fa-calendar-alt"></i> Planificación</li>
+                        <li><i class="fas fa-project-diagram"></i> Coordinación</li>
+                        <li><i class="fas fa-tachometer-alt"></i> Trabajo bajo presión</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-card workflow-card">
+                <h2 class="section-title text-left">Mi forma de trabajar</h2>
+                <div class="exp-content">
+                    <div class="workflow-icon"><i class="fas fa-laptop-code"></i></div>
+                    <p>Utilizo herramientas modernas de desarrollo e inteligencia artificial como apoyo para acelerar procesos, revisar soluciones y mejorar mi productividad.</p>
+                    <p>Mi enfoque se basa en <strong>mantener siempre la comprensión y el control absoluto del código</strong>, asegurando calidad, escalabilidad y buenas prácticas, no solo velocidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section">
+    <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <p class="text-center mb-5">¿Estás buscando a un desarrollador junior comprometido? Hablemos.</p>
+        
+        <div class="contact-grid">
+            <a href="mailto:tuemail@ejemplo.com" class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>tuemail@ejemplo.com</p>
+            </a>
+            <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contact-card">
+                <i class="fab fa-linkedin"></i>
+                <h3>LinkedIn</h3>
+                <p>Jordi Martin</p>
+            </a>
+            <a href="https://github.com/tu-usuario" target="_blank" class="contact-card">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <p>@tu-usuario</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
