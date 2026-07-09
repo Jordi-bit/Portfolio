@@ -164,9 +164,11 @@ ul {
 
 .mt-3 { margin-top: 1rem; }
 .mt-4 { margin-top: 1.5rem; }
+.mb-4 { margin-bottom: 1.5rem; }
 .mb-5 { margin-bottom: 3rem; }
 .text-center { text-align: center; }
 .text-primary { color: var(--primary); }
+.text-muted { color: var(--text-muted); }
 
 /* =========================================
    NAVBAR
