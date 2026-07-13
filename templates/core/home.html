@@ -102,6 +102,76 @@
                 </div>
             </article>
 
+            <!-- Proyecto Destacado 2 - Drone Mission Planner -->
+            <article class="project-card featured-card">
+                <div class="project-img-container">
+                    <div class="project-img-placeholder drone-placeholder"><i class="fas fa-drone-alt"></i><i class="fas fa-helicopter" style="font-size:2.8rem;"></i></div>
+                </div>
+                <div class="project-content">
+                    <div class="featured-badge"><i class="fas fa-star"></i> Destacado</div>
+                    <h3 class="project-title">Drone Mission Planner</h3>
+                    <p class="project-desc">Aplicación desarrollada para planificar y ejecutar rutas automáticas de un dron DJI Tello sobre un mapa tridimensional.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check text-primary"></i> Generación de mapas 3D</li>
+                        <li><i class="fas fa-check text-primary"></i> Definición de waypoints y rutas</li>
+                        <li><i class="fas fa-check text-primary"></i> Ejecución automática del recorrido</li>
+                        <li><i class="fas fa-check text-primary"></i> Control manual del dron</li>
+                        <li><i class="fas fa-check text-primary"></i> Activación de cámara durante el vuelo</li>
+                        <li><i class="fas fa-check text-primary"></i> Gestión del punto de retorno</li>
+                        <li><i class="fas fa-check text-primary"></i> Almacenamiento y carga de mapas</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">DJI Tello SDK</span>
+                        <span class="tech-badge">OpenCV</span>
+                        <span class="tech-badge">Tkinter</span>
+                        <span class="tech-badge">Threading</span>
+                    </div>
+                    <div class="project-learning">
+                        <strong>Aprendizaje:</strong> Comunicación con hardware, programación orientada a objetos, gestión de eventos, planificación de rutas e integración de múltiples componentes.
+                    </div>
+                    <div class="project-links">
+                        <a href="#drone-planner" class="btn btn-sm btn-outline"><i class="fas fa-info-circle"></i> Detalles</a>
+                        <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto Destacado 3 - Football Prediction Engine -->
+            <article class="project-card featured-card football-card">
+                <div class="project-img-container">
+                    <div class="project-img-placeholder football-placeholder">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="featured-badge football-badge"><i class="fas fa-star"></i> Destacado</div>
+                    <h3 class="project-title">Football Match Prediction Engine</h3>
+                    <p class="project-desc">Motor de predicción de partidos de fútbol entrenado con datos históricos usando TensorFlow. Predice probabilidades 1-X-2 con visualización de resultados.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check text-primary"></i> Entrenamiento con datos históricos</li>
+                        <li><i class="fas fa-check text-primary"></i> Procesamiento y limpieza de datos</li>
+                        <li><i class="fas fa-check text-primary"></i> Predicción de probabilidades (1-X-2)</li>
+                        <li><i class="fas fa-check text-primary"></i> Comparación entre equipos</li>
+                        <li><i class="fas fa-check text-primary"></i> Evaluación y visualización de resultados</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">NumPy</span>
+                        <span class="tech-badge">Matplotlib</span>
+                    </div>
+                    <div class="project-learning">
+                        <strong>Aprendizaje:</strong> Preparación de datos, diseño y entrenamiento de modelos, evaluación, ajuste de parámetros e interpretación de probabilidades.
+                    </div>
+                    <div class="project-links">
+                        <a href="#football-prediction" class="btn btn-sm btn-outline"><i class="fas fa-info-circle"></i> Detalles</a>
+                        <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </article>
+
             <!-- Proyecto 1 -->
             <article class="project-card">
                 <div class="project-img-container">
@@ -122,7 +192,7 @@
                         <strong>Aprendizaje:</strong> Gestión de metadatos, integración de APIs de mapas y manejo de archivos multimedia.
                     </div>
                     <div class="project-links">
-                        <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://github.com/Jordi-bit/TourismMap.git" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
                         <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
                     </div>
                 </div>
@@ -217,6 +287,228 @@
                     <li><i class="fas fa-layer-group"></i> Aplicaciones propias</li>
                 </ul>
                 <a href="#" class="btn btn-primary mt-4"><i class="fas fa-file-pdf"></i> Ver documentación completa PDF</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DRONE MISSION PLANNER – DETALLE -->
+<section id="drone-planner" class="section drone-section">
+    <div class="container">
+        <h2 class="section-title">Drone Mission Planner</h2>
+        <div class="drone-content">
+            <!-- Visual: animated waypoint map -->
+            <div class="drone-diagram">
+                <h4>🗺️ Mapa de waypoints</h4>
+                <div class="waypoint-map">
+                    <!-- SVG path connecting waypoints -->
+                    <svg class="wp-path" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <polyline
+                            points="80,225 140,165 240,120 300,75 220,60 140,105 80,225"
+                            fill="none"
+                            stroke="rgba(59,130,246,0.4)"
+                            stroke-width="1.5"
+                            stroke-dasharray="6 4"
+                        />
+                    </svg>
+                    <!-- Home point (green) -->
+                    <div class="wp-dot home-dot" style="left:20%;top:75%;">
+                        <span class="wp-label">🏠 Home</span>
+                    </div>
+                    <!-- Waypoints -->
+                    <div class="wp-dot" style="left:35%;top:55%;">
+                        <span class="wp-label">WP1</span>
+                    </div>
+                    <div class="wp-dot" style="left:60%;top:40%;">
+                        <span class="wp-label">WP2</span>
+                    </div>
+                    <div class="wp-dot" style="left:75%;top:25%;">
+                        <span class="wp-label">WP3</span>
+                    </div>
+                    <div class="wp-dot" style="left:55%;top:20%;">
+                        <span class="wp-label">WP4</span>
+                    </div>
+                    <!-- Animated drone icon -->
+                    <i class="fas fa-helicopter wp-drone-icon"></i>
+                </div>
+            </div>
+
+            <!-- Info panel -->
+            <div class="drone-info">
+                <h3>Mi proyecto de robótica aérea</h3>
+                <p class="mb-4 text-muted">Sistema completo para controlar un dron DJI Tello: desde la planificación visual de rutas hasta la ejecución autónoma en tiempo real con cámara activa.</p>
+
+                <div class="drone-features-grid">
+                    <div class="drone-feature-item">
+                        <i class="fas fa-map"></i>
+                        <span>Mapas 3D</span>
+                    </div>
+                    <div class="drone-feature-item">
+                        <i class="fas fa-map-pin"></i>
+                        <span>Waypoints y rutas</span>
+                    </div>
+                    <div class="drone-feature-item">
+                        <i class="fas fa-route"></i>
+                        <span>Vuelo autónomo</span>
+                    </div>
+                    <div class="drone-feature-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Control manual</span>
+                    </div>
+                    <div class="drone-feature-item">
+                        <i class="fas fa-video"></i>
+                        <span>Cámara en vuelo</span>
+                    </div>
+                    <div class="drone-feature-item">
+                        <i class="fas fa-home"></i>
+                        <span>Punto de retorno</span>
+                    </div>
+                    <div class="drone-feature-item">
+                        <i class="fas fa-save"></i>
+                        <span>Guardar mapas</span>
+                    </div>
+                    <div class="drone-feature-item">
+                        <i class="fas fa-microchip"></i>
+                        <span>Comunicación SDK</span>
+                    </div>
+                </div>
+
+                <div class="drone-tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">DJI Tello SDK</span>
+                    <span class="tech-badge">OpenCV</span>
+                    <span class="tech-badge">Tkinter</span>
+                    <span class="tech-badge">Threading</span>
+                    <span class="tech-badge">Socket UDP</span>
+                </div>
+
+                <ul class="lab-features mb-4">
+                    <li><i class="fas fa-wifi"></i> Comunicación con hardware real vía UDP</li>
+                    <li><i class="fas fa-object-group"></i> Programación orientada a objetos</li>
+                    <li><i class="fas fa-bolt"></i> Gestión de eventos y threading</li>
+                    <li><i class="fas fa-project-diagram"></i> Planificación y ejecución de rutas</li>
+                    <li><i class="fas fa-puzzle-piece"></i> Integración de múltiples componentes</li>
+                </ul>
+
+                <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> Ver en GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTBALL MATCH PREDICTION ENGINE – DETALLE -->
+<section id="football-prediction" class="section bg-alt football-section">
+    <div class="container">
+        <h2 class="section-title">Football Match Prediction Engine</h2>
+        <div class="football-content">
+
+            <!-- Visual: animated prediction panel -->
+            <div class="football-diagram">
+                <h4>⚽ Predicción en tiempo real</h4>
+
+                <!-- Match header -->
+                <div class="match-header">
+                    <div class="team-badge team-home">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Local</span>
+                    </div>
+                    <div class="match-vs">VS</div>
+                    <div class="team-badge team-away">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Visitante</span>
+                    </div>
+                </div>
+
+                <!-- Probability bars -->
+                <div class="prob-bars">
+                    <div class="prob-row">
+                        <span class="prob-label">1 Victoria Local</span>
+                        <div class="prob-bar-track">
+                            <div class="prob-bar prob-bar-home" style="--target-w: 52%"></div>
+                        </div>
+                        <span class="prob-value">52%</span>
+                    </div>
+                    <div class="prob-row">
+                        <span class="prob-label">X Empate</span>
+                        <div class="prob-bar-track">
+                            <div class="prob-bar prob-bar-draw" style="--target-w: 27%"></div>
+                        </div>
+                        <span class="prob-value">27%</span>
+                    </div>
+                    <div class="prob-row">
+                        <span class="prob-label">2 Victoria Visitante</span>
+                        <div class="prob-bar-track">
+                            <div class="prob-bar prob-bar-away" style="--target-w: 21%"></div>
+                        </div>
+                        <span class="prob-value">21%</span>
+                    </div>
+                </div>
+
+                <!-- Model accuracy badge -->
+                <div class="model-accuracy">
+                    <i class="fas fa-brain"></i>
+                    <span>Precisión del modelo: <strong>~71%</strong></span>
+                </div>
+            </div>
+
+            <!-- Info panel -->
+            <div class="football-info">
+                <h3>Mi motor de predicción con IA</h3>
+                <p class="mb-4 text-muted">Proyecto personal de Machine Learning donde diseñé, entrené y evalué una red neuronal capaz de predecir el resultado de partidos de fútbol a partir de estadísticas históricas.</p>
+
+                <!-- ML Pipeline -->
+                <div class="ml-pipeline">
+                    <div class="pipeline-step">
+                        <div class="pipeline-icon"><i class="fas fa-database"></i></div>
+                        <div class="pipeline-text">
+                            <strong>Datos históricos</strong>
+                            <span>CSV con estadísticas de partidos</span>
+                        </div>
+                    </div>
+                    <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="pipeline-step">
+                        <div class="pipeline-icon"><i class="fas fa-broom"></i></div>
+                        <div class="pipeline-text">
+                            <strong>Limpieza</strong>
+                            <span>Pandas + NumPy</span>
+                        </div>
+                    </div>
+                    <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="pipeline-step">
+                        <div class="pipeline-icon"><i class="fas fa-brain"></i></div>
+                        <div class="pipeline-text">
+                            <strong>Modelo</strong>
+                            <span>Red neuronal TensorFlow</span>
+                        </div>
+                    </div>
+                    <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="pipeline-step">
+                        <div class="pipeline-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div class="pipeline-text">
+                            <strong>Resultados</strong>
+                            <span>Matplotlib + evaluación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="drone-tech-stack mt-4">
+                    <span class="tech-badge">TensorFlow</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">NumPy</span>
+                    <span class="tech-badge">Matplotlib</span>
+                    <span class="tech-badge">SQLite</span>
+                </div>
+
+                <ul class="lab-features mb-4 mt-4">
+                    <li><i class="fas fa-table"></i> Preparación y limpieza de datos reales</li>
+                    <li><i class="fas fa-network-wired"></i> Diseño de arquitectura de red neuronal</li>
+                    <li><i class="fas fa-sliders-h"></i> Ajuste de hiperparámetros</li>
+                    <li><i class="fas fa-chart-line"></i> Evaluación con métricas de clasificación</li>
+                    <li><i class="fas fa-percentage"></i> Interpretación de probabilidades</li>
+                </ul>
+
+                <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> Ver en GitHub</a>
             </div>
         </div>
     </div>

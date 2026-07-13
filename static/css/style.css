@@ -932,3 +932,583 @@ ul {
         text-align: center;
     }
 }
+
+/* =========================================
+   FEATURED CARD (Drone & others)
+   ========================================= */
+.featured-card {
+    border-color: rgba(59, 130, 246, 0.35);
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.15), 0 8px 30px rgba(59, 130, 246, 0.1);
+    position: relative;
+}
+
+.featured-card:hover {
+    border-color: rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3), 0 15px 40px rgba(59, 130, 246, 0.18);
+}
+
+.featured-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.25), rgba(14, 165, 233, 0.25));
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: var(--secondary);
+    padding: 0.2rem 0.7rem;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+}
+
+.featured-badge i {
+    color: #f59e0b;
+    font-size: 0.7rem;
+}
+
+/* Drone placeholder */
+.drone-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, rgba(59,130,246,0.12) 0%, rgba(14,165,233,0.08) 100%);
+    color: rgba(59, 130, 246, 0.55);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.drone-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(59,130,246,0.15) 0%, transparent 70%);
+    animation: drone-pulse 3s ease-in-out infinite;
+}
+
+@keyframes drone-pulse {
+    0%, 100% { opacity: 0.6; transform: scale(0.95); }
+    50%       { opacity: 1;   transform: scale(1.05); }
+}
+
+.drone-placeholder i {
+    position: relative;
+    z-index: 1;
+    animation: drone-hover 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px rgba(59,130,246,0.6));
+}
+
+@keyframes drone-hover {
+    0%, 100% { transform: translateY(0px) rotate(-3deg); }
+    50%       { transform: translateY(-8px) rotate(3deg); }
+}
+
+/* =========================================
+   DRONE MISSION PLANNER – DETAIL SECTION
+   ========================================= */
+.drone-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.drone-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 40%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, rgba(15,17,21,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.drone-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+.drone-diagram {
+    background-color: var(--bg-main);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.drone-diagram h4 {
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.waypoint-map {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #0d1117 0%, #0f1923 100%);
+    border-radius: 10px;
+    border: 1px solid rgba(59,130,246,0.1);
+    overflow: hidden;
+}
+
+.waypoint-map::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(59,130,246,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.wp-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 2px solid rgba(255,255,255,0.8);
+    box-shadow: 0 0 10px rgba(59,130,246,0.8);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.wp-dot::after {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: rgba(59,130,246,0.2);
+    animation: wp-ping 2s cubic-bezier(0,0,0.2,1) infinite;
+}
+
+@keyframes wp-ping {
+    75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+.wp-dot.home-dot {
+    background: #10b981;
+    box-shadow: 0 0 10px rgba(16,185,129,0.8);
+    width: 18px;
+    height: 18px;
+}
+
+.wp-dot.home-dot::after {
+    background: rgba(16,185,129,0.2);
+}
+
+.wp-label {
+    position: absolute;
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    white-space: nowrap;
+    transform: translateX(-50%);
+    top: 18px;
+    left: 50%;
+    letter-spacing: 0.5px;
+}
+
+.wp-drone-icon {
+    position: absolute;
+    font-size: 1.4rem;
+    color: var(--secondary);
+    filter: drop-shadow(0 0 6px rgba(14,165,233,0.9));
+    z-index: 3;
+    animation: drone-fly 6s ease-in-out infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes drone-fly {
+    0%   { left: 20%; top: 75%; }
+    16%  { left: 35%; top: 55%; }
+    33%  { left: 60%; top: 40%; }
+    50%  { left: 75%; top: 25%; }
+    66%  { left: 55%; top: 20%; }
+    83%  { left: 35%; top: 35%; }
+    100% { left: 20%; top: 75%; }
+}
+
+.drone-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.drone-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.drone-feature-item {
+    background: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+.drone-feature-item:hover {
+    border-color: rgba(59,130,246,0.3);
+    transform: translateY(-2px);
+}
+
+.drone-feature-item i {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.drone-feature-item span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.drone-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+@media (max-width: 992px) {
+    .drone-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   FOOTBALL PREDICTION – CARD STYLES
+   ========================================= */
+.football-card {
+    border-color: rgba(16, 185, 129, 0.35);
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.15), 0 8px 30px rgba(16, 185, 129, 0.08);
+}
+
+.football-card:hover {
+    border-color: rgba(16, 185, 129, 0.6);
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.3), 0 15px 40px rgba(16, 185, 129, 0.15);
+}
+
+.football-badge {
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
+    border-color: rgba(16, 185, 129, 0.4);
+    color: #34d399;
+}
+
+/* Football placeholder */
+.football-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(16,185,129,0.12) 0%, rgba(5,150,105,0.06) 100%);
+    color: rgba(16, 185, 129, 0.6);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.football-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(16,185,129,0.15) 0%, transparent 65%);
+    animation: football-pulse 3s ease-in-out infinite;
+}
+
+@keyframes football-pulse {
+    0%, 100% { opacity: 0.5; transform: scale(0.9); }
+    50%       { opacity: 1;   transform: scale(1.1); }
+}
+
+.football-placeholder i {
+    font-size: 3.5rem;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 14px rgba(16,185,129,0.7));
+    animation: ball-spin 4s linear infinite;
+}
+
+@keyframes ball-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* =========================================
+   FOOTBALL PREDICTION – DETAIL SECTION
+   ========================================= */
+.football-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.football-section::before {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 40%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.football-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+/* Prediction panel */
+.football-diagram {
+    background-color: var(--bg-main);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(16, 185, 129, 0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.football-diagram h4 {
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* Match header */
+.match-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.team-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.team-badge i {
+    font-size: 2.5rem;
+}
+
+.team-badge span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.team-home i { color: #3b82f6; filter: drop-shadow(0 0 8px rgba(59,130,246,0.5)); }
+.team-away i { color: #ef4444; filter: drop-shadow(0 0 8px rgba(239,68,68,0.5)); }
+
+.match-vs {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+}
+
+/* Probability bars */
+.prob-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.prob-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 40px;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.prob-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.prob-bar-track {
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.prob-bar {
+    height: 100%;
+    border-radius: 4px;
+    width: 0;
+    animation: bar-fill 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes bar-fill {
+    from { width: 0; }
+    to   { width: var(--target-w); }
+}
+
+.prob-bar-home {
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    box-shadow: 0 0 8px rgba(59,130,246,0.5);
+}
+
+.prob-bar-draw {
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    box-shadow: 0 0 8px rgba(245,158,11,0.5);
+}
+
+.prob-bar-away {
+    background: linear-gradient(90deg, #ef4444, #f87171);
+    box-shadow: 0 0 8px rgba(239,68,68,0.5);
+}
+
+.prob-value {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    text-align: right;
+}
+
+/* Model accuracy */
+.model-accuracy {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.model-accuracy i {
+    color: #10b981;
+    font-size: 1.2rem;
+}
+
+.model-accuracy strong {
+    color: #10b981;
+}
+
+/* Football info panel */
+.football-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* ML Pipeline */
+.ml-pipeline {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.pipeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 70px;
+    text-align: center;
+}
+
+.pipeline-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(5,150,105,0.1));
+    border: 1px solid rgba(16,185,129,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #10b981;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.pipeline-step:hover .pipeline-icon {
+    background: rgba(16,185,129,0.3);
+    box-shadow: 0 0 12px rgba(16,185,129,0.3);
+    transform: scale(1.1);
+}
+
+.pipeline-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.pipeline-text strong {
+    font-size: 0.78rem;
+    color: white;
+}
+
+.pipeline-text span {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+}
+
+.pipeline-arrow {
+    display: flex;
+    align-items: center;
+    color: rgba(16,185,129,0.4);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    padding-top: 10px;
+}
+
+@media (max-width: 992px) {
+    .football-content {
+        grid-template-columns: 1fr;
+    }
+    .prob-row {
+        grid-template-columns: 110px 1fr 36px;
+    }
+    .ml-pipeline {
+        justify-content: center;
+    }
+    .pipeline-arrow {
+        transform: rotate(90deg);
+    }
+}
