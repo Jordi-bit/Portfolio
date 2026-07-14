@@ -82,16 +82,20 @@ ul {
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
     text-align: center;
     position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
 }
 
 .section-title.text-left {
-    left: 0;
-    transform: none;
+    justify-content: flex-start;
     text-align: left;
 }
 
@@ -1510,5 +1514,121 @@ ul {
     }
     .pipeline-arrow {
         transform: rotate(90deg);
+    }
+}
+
+/* =========================================
+   TRADUCTOR 1000 PALABRAS – DETAIL SECTION
+   ========================================= */
+.traductor-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.traductor-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 40%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.traductor-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.traductor-diagram {
+    background-color: var(--bg-main);
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.traductor-icon {
+    font-size: 4rem;
+    color: #3b82f6;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 14px rgba(59,130,246,0.5));
+}
+
+.traductor-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.traductor-word {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #93c5fd;
+}
+
+.traductor-arrow {
+    color: rgba(59, 130, 246, 0.5);
+    font-size: 1.5rem;
+}
+
+.traductor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.traductor-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.traductor-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.traductor-label i {
+    color: #3b82f6;
+    font-size: 0.9rem;
+    width: 1rem;
+    text-align: center;
+}
+
+.traductor-value {
+    font-size: 1rem;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.traductor-status {
+    color: #10b981;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .traductor-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
