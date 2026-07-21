@@ -75,3 +75,83 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trigger once on load
     reveal();
 });
+
+// ─── Project Detail Toggle ───────────────────────────────────────────────────
+
+/**
+ * Muestra una sección de detalle de proyecto (oculta por defecto).
+ * @param {string} sectionId  - El id de la sección a mostrar.
+ * @param {HTMLElement} btn   - El botón que activó la acción.
+ */
+function mostrarDetalle(sectionId, btn) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    // Mostrar sección
+    section.classList.remove('detail-hidden');
+    section.classList.add('detail-visible');
+
+    // Scroll suave hasta la sección
+    setTimeout(() => {
+        const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 70;
+        const top = section.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+        window.scrollTo({ top, behavior: 'smooth' });
+    }, 50);
+}
+
+/**
+ * Oculta una sección de detalle y vuelve a la sección de proyectos.
+ * @param {string} sectionId - El id de la sección a ocultar.
+ */
+function cerrarDetalle(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    section.classList.add('detail-hidden');
+    section.classList.remove('detail-visible');
+
+    // Volver a la sección de proyectos
+    const proyectos = document.getElementById('proyectos');
+    if (proyectos) {
+        const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 70;
+        const top = proyectos.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+        window.scrollTo({ top, behavior: 'smooth' });
+    }
+}
+
+/**
+ * Muestra/oculta los proyectos no destacados y actualiza el botón.
+ * @param {HTMLElement} btn - El botón "Ver más proyectos".
+ */
+function toggleExtraProjects(btn) {
+    const extraGrid = document.getElementById('extra-projects');
+    if (!extraGrid) return;
+
+    const isHidden = extraGrid.classList.contains('extra-projects-hidden');
+
+    if (isHidden) {
+        // Mostrar
+        extraGrid.classList.remove('extra-projects-hidden');
+        extraGrid.classList.add('extra-projects-visible');
+        btn.innerHTML = '<i class="fas fa-chevron-up"></i> Ocultar proyectos';
+        // Scroll hasta los proyectos extra
+        setTimeout(() => {
+            const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 70;
+            const top = extraGrid.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }, 50);
+    } else {
+        // Ocultar
+        extraGrid.classList.add('extra-projects-hidden');
+        extraGrid.classList.remove('extra-projects-visible');
+        btn.innerHTML = '<i class="fas fa-chevron-down"></i> Ver más proyectos';
+        // Volver al inicio de proyectos
+        const proyectos = document.getElementById('proyectos');
+        if (proyectos) {
+            const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 70;
+            const top = proyectos.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }
+    }
+}
+

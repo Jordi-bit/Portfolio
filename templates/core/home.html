@@ -78,7 +78,11 @@
             <!-- Proyecto Destacado 1 -->
             <article class="project-card">
                 <div class="project-img-container">
-                    <div class="project-img-placeholder"><i class="fas fa-server"></i></div>
+                    <div class="project-img-placeholder server-placeholder">
+                        <div class="neon-icon-badge">
+                            <i class="fas fa-server"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Raspberry Pi Home Server Lab</h3>
@@ -97,7 +101,7 @@
                         <strong>Aprendizaje:</strong> Administración de servidores Linux, redes y despliegue web.
                     </div>
                     <div class="project-links">
-                        <a href="#laboratorio" class="btn btn-sm btn-outline"><i class="fas fa-info-circle"></i> Detalles</a>
+                        <a href="#laboratorio" class="btn btn-sm btn-outline"><i class="fas fa-info-circle"></i> Ver Laboratorio</a>
                     </div>
                 </div>
             </article>
@@ -105,7 +109,11 @@
             <!-- Proyecto Destacado 2 - Drone Mission Planner -->
             <article class="project-card featured-card">
                 <div class="project-img-container">
-                    <div class="project-img-placeholder drone-placeholder"><i class="fas fa-drone-alt"></i><i class="fas fa-helicopter" style="font-size:2.8rem;"></i></div>
+                    <div class="project-img-placeholder drone-placeholder">
+                        <div class="neon-icon-badge">
+                            <i class="fas fa-helicopter"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Drone Mission Planner</h3>
@@ -130,8 +138,8 @@
                         <strong>Aprendizaje:</strong> Comunicación con hardware, programación orientada a objetos, gestión de eventos, planificación de rutas e integración de múltiples componentes.
                     </div>
                     <div class="project-links">
-                        <a href="#drone-planner" class="btn btn-sm btn-outline"><i class="fas fa-info-circle"></i> Detalles</a>
-                        <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn btn-sm btn-outline" onclick="mostrarDetalle('drone-planner', this)"><i class="fas fa-info-circle"></i> Detalles</button>
+                        <a href="https://github.com/Jordi-bit/MapRobot" target="_blank" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </article>
@@ -140,7 +148,9 @@
             <article class="project-card featured-card football-card">
                 <div class="project-img-container">
                     <div class="project-img-placeholder football-placeholder">
-                        <i class="fas fa-futbol"></i>
+                        <div class="neon-icon-badge">
+                            <i class="fas fa-futbol"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="project-content">
@@ -164,16 +174,20 @@
                         <strong>Aprendizaje:</strong> Preparación de datos, diseño y entrenamiento de modelos, evaluación, ajuste de parámetros e interpretación de probabilidades.
                     </div>
                     <div class="project-links">
-                        <a href="#football-prediction" class="btn btn-sm btn-outline"><i class="fas fa-info-circle"></i> Detalles</a>
-                        <a href="https://github.com/Jordi-bit/Quiniela-Predictor-1X2" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn btn-sm btn-outline" onclick="mostrarDetalle('football-prediction', this)"><i class="fas fa-info-circle"></i> Detalles</button>
+                        <a href="https://github.com/Jordi-bit/Quiniela-Predictor-1X2" target="_blank" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </article>
 
-            <!-- Proyecto 1 -->
+            <!-- TourismMap -->
             <article class="project-card">
                 <div class="project-img-container">
-                    <div class="project-img-placeholder"><i class="fas fa-map-marked-alt"></i></div>
+                    <div class="project-img-placeholder tourism-placeholder">
+                        <div class="neon-icon-badge">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">TourismMap</h3>
@@ -191,15 +205,18 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Jordi-bit/TourismMap" target="_blank" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-external-link-alt"></i> Demo</a>
                     </div>
                 </div>
             </article>
 
-            <!-- Proyecto 2 -->
+            <!-- Kits-Arcade -->
             <article class="project-card">
                 <div class="project-img-container">
-                    <div class="project-img-placeholder"><i class="fas fa-gamepad"></i></div>
+                    <div class="project-img-placeholder arcade-placeholder">
+                        <div class="neon-icon-badge">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Kits-Arcade</h3>
@@ -221,79 +238,85 @@
                 </div>
             </article>
 
-            <!-- Proyecto 3 -->
+            <!-- CyberSecurity Tree -->
             <article class="project-card">
                 <div class="project-img-container">
-                    <div class="project-img-placeholder"><i class="fas fa-network-wired"></i></div>
+                    <div class="project-img-placeholder security-placeholder">
+                        <div class="neon-icon-badge">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">CyberSecurity Tree</h3>
-                    <p class="project-desc">Proyecto enfocado en la categorización y análisis de vulnerabilidades y defensa.</p>
+                    <p class="project-desc">Árbol de análisis de vulnerabilidades y superficie de ataque para auditoría de seguridad en sistemas y redes.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check text-primary"></i> Mapas de conocimiento</li>
-                        <li><i class="fas fa-check text-primary"></i> Funcionalidades de auditoría</li>
+                        <li><i class="fas fa-check text-primary"></i> Escaneo de puertos y servicios</li>
+                        <li><i class="fas fa-check text-primary"></i> Mapeo de superficie de ataque</li>
+                        <li><i class="fas fa-check text-primary"></i> Generación de informes de vulnerabilidades</li>
                     </ul>
                     <div class="project-tech">
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Security Tools</span>
+                        <span class="tech-badge">Nmap</span>
+                        <span class="tech-badge">Bash</span>
+                        <span class="tech-badge">Linux</span>
                     </div>
                     <div class="project-learning">
-                        <strong>Aprendizaje:</strong> Entendimiento de vectores de ataque y metodologías de defensa estructurada.
+                        <strong>Aprendizaje:</strong> Auditoría de seguridad, análisis de vulnerabilidades, hardening de sistemas y evaluación de riesgos.
                     </div>
-                                           
-                    <div class="project-links"> 
+                    <div class="project-links">
                         <a href="https://cibersecurity-tree.4004c.com" target="_blank" class="btn btn-sm btn-outline"><i class="fas fa-external-link-alt"></i> Enlace web</a>
-                        <a href="https://github.com/Jordi-bit/The-Cibersecurity-Tree" target="_blank" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://github.com/Jordi-bit/ciber_tree" target="_blank" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Proyectos extra (ocultos por defecto) -->
+        <div id="extra-projects" class="projects-grid extra-projects-hidden">
+
+            <!-- Traductor 1000 palabras -->
+            <article class="project-card">
+                <div class="project-img-container">
+                    <div class="project-img-placeholder" style="background: radial-gradient(circle at center, rgba(168, 85, 247, 0.25) 0%, transparent 70%);">
+                        <div class="neon-icon-badge" style="color: #a855f7; border: 2px solid #a855f7; box-shadow: 0 0 30px rgba(168,85,247,0.8), inset 0 0 18px rgba(168,85,247,0.4);">
+                            <i class="fas fa-language"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Traductor 1000 palabras</h3>
+                    <p class="project-desc">Aplicación de traducción multilingüe para aprender 1000 palabras en inglés con sistema de repaso inteligente.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check text-primary"></i> Traducción interactiva</li>
+                        <li><i class="fas fa-check text-primary"></i> Almacena palabras erróneas para repaso</li>
+                        <li><i class="fas fa-check text-primary"></i> Interfaz intuitiva</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Tkinter</span>
+                    </div>
+                    <div class="project-learning">
+                        <strong>Aprendizaje:</strong> Manejo de estructuras de datos avanzadas y diseño de interfaces de usuario.
+                    </div>
+                    <div class="project-links">
+                        <button class="btn btn-sm btn-outline" onclick="mostrarDetalle('traductor-1000-palabras', this)"><i class="fas fa-info-circle"></i> Detalles</button>
                     </div>
                 </div>
             </article>
         </div>
 
         <div class="github-more">
-            <p>Más proyectos disponibles</p>
-            <a href="#traductor-1000-palabras" class="btn btn-outline"><i class="fas fa-external-link-alt"></i> Visitar proyectos</a>
+            <p>¿Quieres ver todos los proyectos?</p>
+            <button id="btn-ver-mas" class="btn btn-outline" onclick="toggleExtraProjects(this)">
+                <i class="fas fa-chevron-down"></i> Ver más proyectos
+            </button>
         </div>
     </div>
 </section>
 
-<!-- LABORATORIO RASPBERRY PI -->
-<section id="laboratorio" class="section bg-alt lab-section">
-    <div class="container">
-        <h2 class="section-title">Raspberry Pi Home Server Lab</h2>
-        <div class="lab-content">
-            <div class="lab-diagram">
-                <div class="diagram-node">Internet</div>
-                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
-                <div class="diagram-node">Router</div>
-                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
-                <div class="diagram-node highlight-node">Raspberry Pi 3B+</div>
-                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
-                <div class="diagram-node">Docker</div>
-                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
-                <div class="diagram-node">Nginx</div>
-                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
-                <div class="diagram-node">Aplicaciones (Django)</div>
-            </div>
-            <div class="lab-info">
-                <h3>Mi laboratorio personal</h3>
-                <p class="mb-4 text-muted">Mi entorno de aprendizaje donde desarrollo, pruebo y despliego mis proyectos.</p>
-                <ul class="lab-features">
-                    <li><i class="fab fa-raspberry-pi"></i> Raspberry Pi 3B+</li>
-                    <li><i class="fab fa-linux"></i> Linux</li>
-                    <li><i class="fas fa-server"></i> Servidor web (Nginx/Docker)</li>
-                    <li><i class="fab fa-git-alt"></i> Git</li>
-                    <li><i class="fas fa-globe"></i> Dominio 4004c.com</li>
-                    <li><i class="fas fa-lock"></i> HTTPS</li>
-                    <li><i class="fas fa-layer-group"></i> Aplicaciones propias</li>
-                </ul>
-                <a href="#" class="btn btn-primary mt-4"><i class="fas fa-file-pdf"></i> Ver documentación completa PDF</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- DRONE MISSION PLANNER – DETALLE -->
-<section id="drone-planner" class="section drone-section">
+<!-- DRONE MISSION PLANNER – DETALLE (oculto por defecto) -->
+<section id="drone-planner" class="section drone-section detail-section detail-hidden">
     <div class="container">
         <h2 class="section-title">Drone Mission Planner</h2>
         <div class="drone-content">
@@ -391,13 +414,19 @@
                 </ul>
 
                 <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> Ver en GitHub</a>
+
+                <div class="detail-close-btn">
+                    <button class="btn btn-sm btn-close-detail" onclick="cerrarDetalle('drone-planner', this)">
+                        <i class="fas fa-chevron-up"></i> Cerrar detalles
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- FOOTBALL MATCH PREDICTION ENGINE – DETALLE -->
-<section id="football-prediction" class="section bg-alt football-section">
+<!-- FOOTBALL MATCH PREDICTION ENGINE – DETALLE (oculto por defecto) -->
+<section id="football-prediction" class="section bg-alt football-section detail-section detail-hidden">
     <div class="container">
         <h2 class="section-title">Football Match Prediction Engine</h2>
         <div class="football-content">
@@ -509,13 +538,19 @@
                 </ul>
 
                 <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> Ver en GitHub</a>
+
+                <div class="detail-close-btn">
+                    <button class="btn btn-sm btn-close-detail" onclick="cerrarDetalle('football-prediction', this)">
+                        <i class="fas fa-chevron-up"></i> Cerrar detalles
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- TRADUCTOR 1000 PALABRAS – DETALLE -->
-<section id="traductor-1000-palabras" class="section bg-alt traductor-section">
+<!-- TRADUCTOR 1000 PALABRAS – DETALLE (oculto por defecto) -->
+<section id="traductor-1000-palabras" class="section bg-alt traductor-section detail-section detail-hidden">
     <div class="container">
         <h2 class="section-title">Traductor 1000 palabras</h2>
         <div class="traductor-content">
@@ -544,6 +579,48 @@
                     <span class="traductor-label"><i class="fas fa-graduation-cap"></i> Qué aprendí:</span>
                     <span class="traductor-value">Manejo de estructuras de datos avanzadas, seleccion de palabras y diseño de interfaces de usuario basicas.</span>
                 </div>
+
+                <div class="detail-close-btn">
+                    <button class="btn btn-sm btn-close-detail" onclick="cerrarDetalle('traductor-1000-palabras')">
+                        <i class="fas fa-chevron-up"></i> Cerrar detalles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LABORATORIO RASPBERRY PI -->
+<section id="laboratorio" class="section bg-alt lab-section">
+    <div class="container">
+        <h2 class="section-title">Raspberry Pi Home Server Lab</h2>
+        <div class="lab-content">
+            <div class="lab-diagram">
+                <div class="diagram-node">Internet</div>
+                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="diagram-node">Router</div>
+                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="diagram-node highlight-node">Raspberry Pi 3B+</div>
+                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="diagram-node">Docker</div>
+                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="diagram-node">Nginx</div>
+                <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="diagram-node">Aplicaciones (Django)</div>
+            </div>
+            <div class="lab-info">
+                <h3>Mi laboratorio personal</h3>
+                <p class="mb-4 text-muted">Mi entorno de aprendizaje donde desarrollo, pruebo y despliego mis proyectos.</p>
+                <ul class="lab-features">
+                    <li><i class="fab fa-raspberry-pi"></i> Raspberry Pi 3B+</li>
+                    <li><i class="fab fa-linux"></i> Linux</li>
+                    <li><i class="fas fa-server"></i> Servidor web (Nginx/Docker)</li>
+                    <li><i class="fab fa-git-alt"></i> Git</li>
+                    <li><i class="fas fa-globe"></i> Dominio 4004c.com</li>
+                    <li><i class="fas fa-lock"></i> HTTPS</li>
+                    <li><i class="fas fa-layer-group"></i> Aplicaciones propias</li>
+                </ul>
+                <a href="#" class="btn btn-primary mt-4"><i class="fas fa-file-pdf"></i> Ver documentación completa PDF</a>
             </div>
         </div>
     </div>
