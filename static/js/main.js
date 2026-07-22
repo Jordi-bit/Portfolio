@@ -87,6 +87,12 @@ function mostrarDetalle(sectionId, btn) {
     const section = document.getElementById(sectionId);
     if (!section) return;
 
+    // Insertar la sección justo después del proyecto en el grid
+    const card = btn.closest('.project-card');
+    if (card) {
+        card.parentNode.insertBefore(section, card.nextElementSibling);
+    }
+
     // Mostrar sección
     section.classList.remove('detail-hidden');
     section.classList.add('detail-visible');
@@ -110,11 +116,11 @@ function cerrarDetalle(sectionId) {
     section.classList.add('detail-hidden');
     section.classList.remove('detail-visible');
 
-    // Volver a la sección de proyectos
-    const proyectos = document.getElementById('proyectos');
-    if (proyectos) {
+    // Volver al proyecto justo encima del detalle
+    const card = section.previousElementSibling;
+    if (card && card.classList.contains('project-card')) {
         const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 70;
-        const top = proyectos.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+        const top = card.getBoundingClientRect().top + window.scrollY - navHeight - 16;
         window.scrollTo({ top, behavior: 'smooth' });
     }
 }
@@ -153,5 +159,18 @@ function toggleExtraProjects(btn) {
             window.scrollTo({ top, behavior: 'smooth' });
         }
     }
+}
+
+function mostrarModalImagenes(projectName) {
+    document.getElementById('modal-project-title').textContent = projectName;
+    const modal = document.getElementById('image-modal');
+    modal.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+}
+
+function cerrarModalImagenes() {
+    const modal = document.getElementById('image-modal');
+    modal.classList.remove('visible');
+    document.body.style.overflow = '';
 }
 

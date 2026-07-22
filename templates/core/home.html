@@ -1123,7 +1123,7 @@
                     <p><strong>Centro:</strong> (Centro de Formación)</p>
                     <p><strong>Año:</strong> 2023</p>
                 </div>
-                <a href="#" class="btn btn-outline btn-sm mt-3">Ver certificado</a>
+                <button class="btn btn-outline btn-sm mt-3" onclick="mostrarModalImagenes('Programación Orientada a Objetos y Bases de Datos')"><i class="fas fa-image"></i> Ver certificado</button>
             </div>
 
             <div class="cert-card">
@@ -1136,7 +1136,7 @@
                     <p><strong>Centro:</strong> (Centro de Formación)</p>
                     <p><strong>Año:</strong> 2024</p>
                 </div>
-                <a href="#" class="btn btn-outline btn-sm mt-3">Ver certificado</a>
+                <button class="btn btn-outline btn-sm mt-3" onclick="mostrarModalImagenes('Seguridad Informática (Ciberseguridad)')"><i class="fas fa-image"></i> Ver certificado</button>
             </div>
         </div>
     </div>
@@ -1236,5 +1236,36 @@
         </div>
     </div>
 </section>
+
+<!-- MODAL DE IMÁGENES -->
+<div id="image-modal" class="image-modal">
+    <div class="modal-overlay" onclick="cerrarModalImagenes()"></div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-project-title">Proyecto</h3>
+            <button class="modal-close-btn" onclick="cerrarModalImagenes()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <img src="{% static 'images/construccion.jpg' %}" alt="Imágenes próximamente" class="modal-image">
+            <p class="modal-caption">Galería de imágenes próximamente</p>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.project-links').forEach(function(links) {
+        var btn = document.createElement('button');
+        btn.className = 'btn btn-sm btn-outline';
+        btn.innerHTML = '<i class="fas fa-images"></i> Imágenes';
+        btn.onclick = function() {
+            var card = this.closest('.project-card');
+            var title = card.querySelector('.project-title').textContent;
+            mostrarModalImagenes(title);
+        };
+        links.appendChild(btn);
+    });
+});
+</script>
 
 {% endblock %}
