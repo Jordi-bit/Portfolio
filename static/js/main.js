@@ -161,11 +161,81 @@ function toggleExtraProjects(btn) {
     }
 }
 
-function mostrarModalImagenes(projectName) {
+var currentModalPage = 1;
+var currentModalFolder = '';
+var currentModalName = '';
+
+function mostrarModalImagenes(projectName, folder, page) {
+    currentModalName = projectName;
+    currentModalFolder = folder;
+    currentModalPage = page || 1;
+
     document.getElementById('modal-project-title').textContent = projectName;
+    cargarImagenModal();
+    document.getElementById('modal-caption').textContent = folder === 'certificados'
+        ? 'Certificado - Imagen próximamente'
+        : 'Galería de imágenes próximamente';
+
     const modal = document.getElementById('image-modal');
     modal.classList.add('visible');
     document.body.style.overflow = 'hidden';
+}
+
+function cargarImagenModal() {
+    var img = document.getElementById('modal-project-image');
+    var page = currentModalPage;
+    var folder = currentModalFolder;
+    var triedPng = false;
+
+    img.onerror = function() {
+        if (!triedPng) {
+            triedPng = true;
+            this.src = '/static/images/' + folder + '/captura' + page + '.png';
+        } else {
+            this.src = '/static/images/construccion.jpg';
+            this.onerror = null;
+        }
+    };
+
+    img.src = '/static/images/' + folder + '/captura' + page + '.jpg';
+
+    document.getElementById('btn-anterior').style.display = currentModalPage <= 1 ? 'none' : 'flex';
+    document.getElementById('modal-page-indicator').textContent = 'Imagen ' + currentModalPage;
+
+    verificarSiguienteImagen();
+}
+
+function verificarSiguienteImagen() {
+    var nextPage = currentModalPage + 1;
+    var folder = currentModalFolder;
+    var probe = new Image();
+
+    probe.onload = function() {
+        document.getElementById('btn-siguiente').style.display = 'flex';
+    };
+    probe.onerror = function() {
+        var probe2 = new Image();
+        probe2.onload = function() {
+            document.getElementById('btn-siguiente').style.display = 'flex';
+        };
+        probe2.onerror = function() {
+            document.getElementById('btn-siguiente').style.display = 'none';
+        };
+        probe2.src = '/static/images/' + folder + '/captura' + nextPage + '.png';
+    };
+    probe.src = '/static/images/' + folder + '/captura' + nextPage + '.jpg';
+}
+
+function siguienteImagen() {
+    currentModalPage++;
+    cargarImagenModal();
+}
+
+function anteriorImagen() {
+    if (currentModalPage > 1) {
+        currentModalPage--;
+        cargarImagenModal();
+    }
 }
 
 function cerrarModalImagenes() {

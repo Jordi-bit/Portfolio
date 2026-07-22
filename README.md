@@ -32,6 +32,9 @@ Profesional con amplia experiencia laboral que ha reorientado su carrera hacia e
 - **Football Match Prediction Engine** — Predicción de resultados con TensorFlow
 - **Traductor 1000 palabras** — Aplicación de traducción con repaso inteligente
 - **Gestión de CVs / Ducky** — Gestor de currículum vitae con Django
+- **Fútbol-Manager** — Gestión de equipos, ligas y jugadores con Django
+- **Conversor imagen a .ICO** — Conversor de imágenes a iconos con Python
+- **Conversor .webm a .mp3** — Conversor de audio con FFmpeg y Tkinter
 - **Hacker-Audit** — Panel de auditoría de seguridad ofensiva
 - **Space Invaders** — Clon del clásico arcade en Pygame
 - **Escalado de Imágenes** — Superresolución con Real-ESRGAN

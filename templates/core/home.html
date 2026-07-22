@@ -476,6 +476,107 @@
                 </div>
             </article>
 
+            <!-- Fútbol-Manager -->
+            <article class="project-card">
+                <div class="project-img-container">
+                    <div class="project-img-placeholder futbol-placeholder">
+                        <div class="neon-icon-badge">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Fútbol-Manager</h3>
+                    <p class="project-desc">Aplicación web Django para gestionar información sobre equipos, ligas, jugadores y estadios de fútbol.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check text-primary"></i> Registro y autenticación de usuarios</li>
+                        <li><i class="fas fa-check text-primary"></i> CRUD completo de equipos, ligas y jugadores</li>
+                        <li><i class="fas fa-check text-primary"></i> Gestión de estadios con mapas Folium</li>
+                        <li><i class="fas fa-check text-primary"></i> Panel de administración Django</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Django</span>
+                        <span class="tech-badge">Bootstrap</span>
+                        <span class="tech-badge">SQLite</span>
+                        <span class="tech-badge">Folium</span>
+                    </div>
+                    <div class="project-learning">
+                        <strong>Aprendizaje:</strong> Desarrollo CRUD con Django, autenticación de usuarios, relaciones entre modelos, integración de mapas con Folium y diseño responsive.
+                    </div>
+                    <div class="project-links">
+                        <button class="btn btn-sm btn-outline" onclick="mostrarDetalle('futbol-manager', this)"><i class="fas fa-info-circle"></i> Detalles</button>
+                        <a href="https://github.com/Jordi-bit/Futbol-Manager" target="_blank" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Conversor imagen a .ICO -->
+            <article class="project-card">
+                <div class="project-img-container">
+                    <div class="project-img-placeholder ico-placeholder">
+                        <div class="neon-icon-badge">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Conversor imagen a .ICO</h3>
+                    <p class="project-desc">Conversor de imágenes a iconos .ico con interfaz gráfica en Python (Tkinter) y soporte para conversión en lote.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check text-primary"></i> Selección múltiple de imágenes</li>
+                        <li><i class="fas fa-check text-primary"></i> Tamaños estándar y personalizados</li>
+                        <li><i class="fas fa-check text-primary"></i> Conversión en lote</li>
+                        <li><i class="fas fa-check text-primary"></i> Mantiene transparencia PNG</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Pillow</span>
+                        <span class="tech-badge">Tkinter</span>
+                    </div>
+                    <div class="project-learning">
+                        <strong>Aprendizaje:</strong> Procesamiento de imágenes con Pillow, interfaces gráficas con Tkinter, conversión de formatos y empaquetado con PyInstaller.
+                    </div>
+                    <div class="project-links">
+                        <button class="btn btn-sm btn-outline" onclick="mostrarDetalle('conversor-ico', this)"><i class="fas fa-info-circle"></i> Detalles</button>
+                        <a href="https://github.com/Jordi-bit/Image-to-ICO-Converter" target="_blank" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Conversor .webm a .mp3 -->
+            <article class="project-card">
+                <div class="project-img-container">
+                    <div class="project-img-placeholder webm-placeholder">
+                        <div class="neon-icon-badge">
+                            <i class="fas fa-file-audio"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Conversor .webm a .mp3</h3>
+                    <p class="project-desc">Aplicación de escritorio con Tkinter para convertir múltiples archivos .webm a .mp3 con barra de progreso.</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check text-primary"></i> Conversión múltiple de archivos .webm</li>
+                        <li><i class="fas fa-check text-primary"></i> Interfaz gráfica con Tkinter</li>
+                        <li><i class="fas fa-check text-primary"></i> Selección de carpeta de destino</li>
+                        <li><i class="fas fa-check text-primary"></i> Barra de progreso en tiempo real</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">FFmpeg</span>
+                        <span class="tech-badge">Tkinter</span>
+                    </div>
+                    <div class="project-learning">
+                        <strong>Aprendizaje:</strong> Conversión de audio con FFmpeg, interfaces gráficas con Tkinter, manejo de múltiples archivos y barras de progreso.
+                    </div>
+                    <div class="project-links">
+                        <button class="btn btn-sm btn-outline" onclick="mostrarDetalle('conversor-webm-mp3', this)"><i class="fas fa-info-circle"></i> Detalles</button>
+                        <a href="https://github.com/Jordi-bit/Conversor-Audio-.webm--.mp3" target="_blank" class="btn btn-sm btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </article>
+
             <!-- Portfolio Personal -->
             <article class="project-card">
                 <div class="project-img-container">
@@ -1026,6 +1127,144 @@
     </div>
 </section>
 
+<!-- FÚTBOL-MANAGER – DETALLE (oculto por defecto) -->
+<section id="futbol-manager" class="section bg-alt traductor-section detail-section detail-hidden">
+    <div class="container">
+        <h2 class="section-title">Fútbol-Manager</h2>
+        <div class="traductor-content">
+            <div class="traductor-diagram" style="border-color: rgba(34,197,94,0.15);">
+                <div class="traductor-icon futbol-icon"><i class="fas fa-futbol"></i></div>
+                <div class="traductor-preview" style="flex-direction: column; gap: 0.75rem;">
+                    <div class="traductor-word" style="background: rgba(34,197,94,0.1); border-color: rgba(34,197,94,0.3); color: #86efac;">Usuario registrado</div>
+                    <div class="traductor-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="traductor-word" style="background: rgba(34,197,94,0.1); border-color: rgba(34,197,94,0.3); color: #86efac;">Equipos + Ligas + Jugadores</div>
+                    <div class="traductor-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="traductor-word" style="background: rgba(34,197,94,0.1); border-color: rgba(34,197,94,0.3); color: #86efac;">Estadios con Folium</div>
+                </div>
+            </div>
+            <div class="traductor-info">
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-code-branch"></i> Proyecto:</span>
+                    <span class="traductor-value">Fútbol-Manager — Gestión deportiva con Django</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-info-circle"></i> Estado:</span>
+                    <span class="traductor-value traductor-status">Completado</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-align-left"></i> Descripción:</span>
+                    <span class="traductor-value">Aplicación web desarrollada con Django y Bootstrap que permite gestionar información sobre equipos, ligas, jugadores y estadios de fútbol. Incluye registro y autenticación de usuarios, CRUD completo para todas las entidades, visualización de estadios con mapas interactivos Folium, panel de administración Django y diseño responsive.</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-cogs"></i> Tecnologías:</span>
+                    <span class="traductor-value">Python, Django, Bootstrap, SQLite, Folium, Pillow, python-decouple</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-graduation-cap"></i> Qué aprendí:</span>
+                    <span class="traductor-value">Desarrollo CRUD completo con Django, relaciones entre modelos (OneToMany, ManyToMany), autenticación y registro de usuarios, integración de mapas interactivos con Folium, diseño de interfaces con Bootstrap y gestión de imágenes con Pillow.</span>
+                </div>
+                <div class="detail-close-btn">
+                    <button class="btn btn-sm btn-close-detail" onclick="cerrarDetalle('futbol-manager')">
+                        <i class="fas fa-chevron-up"></i> Cerrar detalles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONVERSOR IMAGEN A .ICO – DETALLE (oculto por defecto) -->
+<section id="conversor-ico" class="section bg-alt traductor-section detail-section detail-hidden">
+    <div class="container">
+        <h2 class="section-title">Conversor imagen a .ICO</h2>
+        <div class="traductor-content">
+            <div class="traductor-diagram" style="border-color: rgba(244,63,94,0.15);">
+                <div class="traductor-icon ico-icon"><i class="fas fa-file-image"></i></div>
+                <div class="traductor-preview" style="flex-direction: column; gap: 0.75rem;">
+                    <div class="traductor-word" style="background: rgba(244,63,94,0.1); border-color: rgba(244,63,94,0.3); color: #fda4af;">Imagen (PNG, JPG, BMP, GIF)</div>
+                    <div class="traductor-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="traductor-word" style="background: rgba(244,63,94,0.1); border-color: rgba(244,63,94,0.3); color: #fda4af;">Pillow + Tkinter</div>
+                    <div class="traductor-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="traductor-word" style="background: rgba(244,63,94,0.1); border-color: rgba(244,63,94,0.3); color: #fda4af;">Icono .ICO (16–256 px)</div>
+                </div>
+            </div>
+            <div class="traductor-info">
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-code-branch"></i> Proyecto:</span>
+                    <span class="traductor-value">Image to ICO Converter — Conversor de imágenes a iconos</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-info-circle"></i> Estado:</span>
+                    <span class="traductor-value traductor-status">Completado</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-align-left"></i> Descripción:</span>
+                    <span class="traductor-value">Aplicación de escritorio con interfaz gráfica Tkinter que convierte imágenes (PNG, JPG, BMP, GIF, TIFF) a formato .ICO para iconos de Windows. Permite seleccionar múltiples imágenes, elegir tamaños estándar (16, 32, 48, 64, 128, 256) o personalizados, convertir en lote y mantener la transparencia de PNG. Exportable como .exe portátil con PyInstaller.</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-cogs"></i> Tecnologías:</span>
+                    <span class="traductor-value">Python, Pillow, Tkinter, PyInstaller</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-graduation-cap"></i> Qué aprendí:</span>
+                    <span class="traductor-value">Procesamiento y manipulación de imágenes con Pillow (redimensionado, preservación de transparencia), desarrollo de interfaces gráficas con Tkinter, manejo de selección múltiple de archivos, conversión en lote y empaquetado de aplicaciones Python como ejecutable portable.</span>
+                </div>
+                <div class="detail-close-btn">
+                    <button class="btn btn-sm btn-close-detail" onclick="cerrarDetalle('conversor-ico')">
+                        <i class="fas fa-chevron-up"></i> Cerrar detalles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONVERSOR .WEBM A .MP3 – DETALLE (oculto por defecto) -->
+<section id="conversor-webm-mp3" class="section bg-alt traductor-section detail-section detail-hidden">
+    <div class="container">
+        <h2 class="section-title">Conversor .webm a .mp3</h2>
+        <div class="traductor-content">
+            <div class="traductor-diagram" style="border-color: rgba(217,70,239,0.15);">
+                <div class="traductor-icon webm-icon"><i class="fas fa-file-audio"></i></div>
+                <div class="traductor-preview" style="flex-direction: column; gap: 0.75rem;">
+                    <div class="traductor-word" style="background: rgba(217,70,239,0.1); border-color: rgba(217,70,239,0.3); color: #f0abfc;">Archivo .webm</div>
+                    <div class="traductor-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="traductor-word" style="background: rgba(217,70,239,0.1); border-color: rgba(217,70,239,0.3); color: #f0abfc;">FFmpeg + Tkinter</div>
+                    <div class="traductor-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="traductor-word" style="background: rgba(217,70,239,0.1); border-color: rgba(217,70,239,0.3); color: #f0abfc;">Archivo .mp3</div>
+                </div>
+            </div>
+            <div class="traductor-info">
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-code-branch"></i> Proyecto:</span>
+                    <span class="traductor-value">Conversor .webm a .mp3 — Convertidor de audio con FFmpeg</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-info-circle"></i> Estado:</span>
+                    <span class="traductor-value traductor-status">Completado</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-align-left"></i> Descripción:</span>
+                    <span class="traductor-value">Aplicación de escritorio con interfaz gráfica Tkinter que convierte múltiples archivos .webm a .mp3 de forma rápida. Permite seleccionar varios archivos, elegir carpeta de destino, y muestra una barra de progreso en tiempo real. Cada archivo procesado muestra mensaje de éxito o error.</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-cogs"></i> Tecnologías:</span>
+                    <span class="traductor-value">Python, FFmpeg, Tkinter, PyInstaller</span>
+                </div>
+                <div class="traductor-field">
+                    <span class="traductor-label"><i class="fas fa-graduation-cap"></i> Qué aprendí:</span>
+                    <span class="traductor-value">Conversión de audio mediante FFmpeg desde Python, desarrollo de interfaces gráficas con Tkinter, manejo de selección múltiple de archivos, implementación de barras de progreso en tiempo real y gestión de errores por archivo.</span>
+                </div>
+                <div class="detail-close-btn">
+                    <button class="btn btn-sm btn-close-detail" onclick="cerrarDetalle('conversor-webm-mp3')">
+                        <i class="fas fa-chevron-up"></i> Cerrar detalles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- PORTFOLIO PERSONAL – DETALLE (oculto por defecto) -->
 <section id="portfolio-personal" class="section bg-alt traductor-section detail-section detail-hidden">
     <div class="container">
@@ -1123,7 +1362,7 @@
                     <p><strong>Centro:</strong> (Centro de Formación)</p>
                     <p><strong>Año:</strong> 2023</p>
                 </div>
-                <button class="btn btn-outline btn-sm mt-3" onclick="mostrarModalImagenes('Programación Orientada a Objetos y Bases de Datos')"><i class="fas fa-image"></i> Ver certificado</button>
+                <button class="btn btn-outline btn-sm mt-3" onclick="mostrarModalImagenes('Programación Orientada a Objetos y Bases de Datos', 'certificados')"><i class="fas fa-image"></i> Ver certificado</button>
             </div>
 
             <div class="cert-card">
@@ -1136,7 +1375,7 @@
                     <p><strong>Centro:</strong> (Centro de Formación)</p>
                     <p><strong>Año:</strong> 2024</p>
                 </div>
-                <button class="btn btn-outline btn-sm mt-3" onclick="mostrarModalImagenes('Seguridad Informática (Ciberseguridad)')"><i class="fas fa-image"></i> Ver certificado</button>
+                <button class="btn btn-outline btn-sm mt-3" onclick="mostrarModalImagenes('Seguridad Informática (Ciberseguridad)', 'certificados')"><i class="fas fa-image"></i> Ver certificado</button>
             </div>
         </div>
     </div>
@@ -1246,22 +1485,54 @@
             <button class="modal-close-btn" onclick="cerrarModalImagenes()">&times;</button>
         </div>
         <div class="modal-body">
-            <img src="{% static 'images/construccion.jpg' %}" alt="Imágenes próximamente" class="modal-image">
-            <p class="modal-caption">Galería de imágenes próximamente</p>
+            <button class="modal-nav-btn" id="btn-anterior" onclick="anteriorImagen()" style="display:none">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="modal-image-wrapper">
+                <img id="modal-project-image" src="" alt="Imágenes del proyecto" class="modal-image">
+                <span id="modal-page-indicator" class="modal-page-indicator"></span>
+                <p id="modal-caption" class="modal-caption">Galería de imágenes próximamente</p>
+            </div>
+            <button class="modal-nav-btn" id="btn-siguiente" onclick="siguienteImagen()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
     </div>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    var folderMap = {
+        'Raspberry Pi Home Server Lab': 'raspberry-pi',
+        'Drone Mission Planner': 'drone-planner',
+        'Football Match Prediction Engine': 'football-prediction',
+        'TourismMap': 'tourism-map',
+        'Kits-Arcade': 'kits-arcade',
+        'CyberSecurity Tree': 'cybersecurity-tree',
+        'Traductor 1000 palabras': 'traductor-1000-palabras',
+        'Gesti\u00f3n de CVs / Ducky': 'gestion-cvs',
+        'Hacker-Audit / Hacking Dashboard': 'hacker-audit',
+        'Space Invaders': 'space-invaders',
+        'Escalado de Im\u00e1genes / Real-ESRGAN': 'escalado-imagenes',
+        'Conversor Universal': 'conversor-universal',
+        'F\u00fatbol-Manager': 'futbol-manager',
+        'Conversor imagen a .ICO': 'conversor-ico',
+        'Conversor .webm a .mp3': 'conversor-webm-mp3',
+        'Portfolio Personal': 'portfolio-personal'
+    };
     document.querySelectorAll('.project-links').forEach(function(links) {
         var btn = document.createElement('button');
         btn.className = 'btn btn-sm btn-outline';
-        btn.innerHTML = '<i class="fas fa-images"></i> Imágenes';
+        btn.innerHTML = '<i class="fas fa-images"></i> Im\u00e1genes';
         btn.onclick = function() {
             var card = this.closest('.project-card');
             var title = card.querySelector('.project-title').textContent;
-            mostrarModalImagenes(title);
+            var folder = folderMap[title];
+            if (folder) {
+                mostrarModalImagenes(title, folder);
+            } else {
+                mostrarModalImagenes(title, title.toLowerCase().replace(/[\s\/.]+/g, '-').replace(/[^a-z0-9-]/g, ''));
+            }
         };
         links.appendChild(btn);
     });

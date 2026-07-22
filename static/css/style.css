@@ -697,6 +697,39 @@ ul {
     background: radial-gradient(circle at center, rgba(139, 92, 246, 0.25) 0%, transparent 70%) !important;
 }
 
+/* 13. Fútbol-Manager (Green) */
+.futbol-placeholder .neon-icon-badge {
+    color: #22c55e !important;
+    border: 2px solid #22c55e !important;
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.85), inset 0 0 18px rgba(34, 197, 94, 0.45) !important;
+    filter: drop-shadow(0 0 15px rgba(34, 197, 94, 1)) !important;
+}
+.futbol-placeholder {
+    background: radial-gradient(circle at center, rgba(34, 197, 94, 0.25) 0%, transparent 70%) !important;
+}
+
+/* 14. Conversor imagen a .ICO (Rose) */
+.ico-placeholder .neon-icon-badge {
+    color: #f43f5e !important;
+    border: 2px solid #f43f5e !important;
+    box-shadow: 0 0 30px rgba(244, 63, 94, 0.85), inset 0 0 18px rgba(244, 63, 94, 0.45) !important;
+    filter: drop-shadow(0 0 15px rgba(244, 63, 94, 1)) !important;
+}
+.ico-placeholder {
+    background: radial-gradient(circle at center, rgba(244, 63, 94, 0.25) 0%, transparent 70%) !important;
+}
+
+/* 15. Conversor .webm a .mp3 (Fuchsia) */
+.webm-placeholder .neon-icon-badge {
+    color: #d946ef !important;
+    border: 2px solid #d946ef !important;
+    box-shadow: 0 0 30px rgba(217, 70, 239, 0.85), inset 0 0 18px rgba(217, 70, 239, 0.45) !important;
+    filter: drop-shadow(0 0 15px rgba(217, 70, 239, 1)) !important;
+}
+.webm-placeholder {
+    background: radial-gradient(circle at center, rgba(217, 70, 239, 0.25) 0%, transparent 70%) !important;
+}
+
 /* Card Hover Accent Border Glows */
 .project-card:has(.tourism-placeholder):hover {
     border-color: rgba(0, 242, 254, 0.6);
@@ -741,6 +774,21 @@ ul {
 .project-card:has(.portfolio-placeholder):hover {
     border-color: rgba(139, 92, 246, 0.6);
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.25);
+}
+
+.project-card:has(.futbol-placeholder):hover {
+    border-color: rgba(34, 197, 94, 0.6);
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.25);
+}
+
+.project-card:has(.ico-placeholder):hover {
+    border-color: rgba(244, 63, 94, 0.6);
+    box-shadow: 0 10px 30px rgba(244, 63, 94, 0.25);
+}
+
+.project-card:has(.webm-placeholder):hover {
+    border-color: rgba(217, 70, 239, 0.6);
+    box-shadow: 0 10px 30px rgba(217, 70, 239, 0.25);
 }
 
 .project-card:has(.server-placeholder):hover {
@@ -2216,6 +2264,21 @@ ul {
     filter: drop-shadow(0 0 14px rgba(139, 92, 246, 0.5)) !important;
 }
 
+.futbol-icon {
+    color: #22c55e !important;
+    filter: drop-shadow(0 0 14px rgba(34, 197, 94, 0.5)) !important;
+}
+
+.ico-icon {
+    color: #f43f5e !important;
+    filter: drop-shadow(0 0 14px rgba(244, 63, 94, 0.5)) !important;
+}
+
+.webm-icon {
+    color: #d946ef !important;
+    filter: drop-shadow(0 0 14px rgba(217, 70, 239, 0.5)) !important;
+}
+
 .image-modal {
     display: none;
     position: fixed;
@@ -2285,7 +2348,16 @@ ul {
 
 .modal-body {
     padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.modal-image-wrapper {
+    flex: 1;
     text-align: center;
+    min-width: 0;
 }
 
 .modal-image {
@@ -2295,8 +2367,36 @@ ul {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+.modal-nav-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.modal-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--primary);
+}
+
+.modal-page-indicator {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
 .modal-caption {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     color: var(--text-muted);
     font-style: italic;
     font-size: 0.9rem;
