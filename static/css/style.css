@@ -435,10 +435,12 @@ ul {
    ========================================= */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1.5rem;
     max-width: 900px;
     margin: 0 auto;
+    width: 100%;
+    min-width: 0;
 }
 
 .tech-card {
@@ -451,6 +453,18 @@ ul {
     align-items: center;
     gap: 1rem;
     transition: var(--transition);
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.tech-card span {
+    text-align: center;
+    max-width: 100%;
+    word-break: break-word;
 }
 
 .tech-card:hover {
@@ -466,8 +480,35 @@ ul {
     transition: var(--transition);
 }
 
+.tech-card:nth-child(1) .tech-icon { color: #cc7a3a; }
+.tech-card:nth-child(2) .tech-icon { color: #3a7a8a; }
+.tech-card:nth-child(3) .tech-icon { color: #b07a4a; }
+.tech-card:nth-child(4) .tech-icon { color: #8a8a9a; }
+.tech-card:nth-child(5) .tech-icon { color: #9a8a3a; }
+.tech-card:nth-child(6) .tech-icon { color: #b07a3a; }
+.tech-card:nth-child(7) .tech-icon { color: #4a6aaa; }
+.tech-card:nth-child(8) .tech-icon { color: #a09a3a; }
+.tech-card:nth-child(9) .tech-icon { color: #4a7a8a; }
+.tech-card:nth-child(10) .tech-icon { color: #9a4a5a; }
+.tech-card:nth-child(11) .tech-icon { color: #4a8a6a; }
+
 .tech-card:hover .tech-icon {
     color: var(--primary);
+}
+
+@media (max-width: 700px) {
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+
+    .tech-card {
+        padding: 0.85rem;
+    }
+
+    .tech-icon {
+        font-size: 1.8rem;
+    }
 }
 
 /* =========================================
@@ -601,6 +642,61 @@ ul {
     background: radial-gradient(circle at center, rgba(0, 255, 102, 0.25) 0%, transparent 70%) !important;
 }
 
+/* 7. Gestión de CVs / Ducky (Amber / Gold) */
+.cv-placeholder .neon-icon-badge {
+    color: #f59e0b !important;
+    border: 2px solid #f59e0b !important;
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.85), inset 0 0 18px rgba(245, 158, 11, 0.45) !important;
+    filter: drop-shadow(0 0 15px rgba(245, 158, 11, 1)) !important;
+}
+.cv-placeholder {
+    background: radial-gradient(circle at center, rgba(245, 158, 11, 0.25) 0%, transparent 70%) !important;
+}
+
+/* 8. Hacker-Audit / Hacking Dashboard (Crimson Red) */
+.hacker-placeholder .neon-icon-badge {
+    color: #dc2626 !important;
+    border: 2px solid #dc2626 !important;
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.85), inset 0 0 18px rgba(220, 38, 38, 0.45) !important;
+    filter: drop-shadow(0 0 15px rgba(220, 38, 38, 1)) !important;
+}
+.hacker-placeholder {
+    background: radial-gradient(circle at center, rgba(220, 38, 38, 0.25) 0%, transparent 70%) !important;
+}
+
+/* 9. Space Invaders (Teal / Cyan) */
+.space-placeholder .neon-icon-badge {
+    color: #06b6d4 !important;
+    border: 2px solid #06b6d4 !important;
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.85), inset 0 0 18px rgba(6, 182, 212, 0.45) !important;
+    filter: drop-shadow(0 0 15px rgba(6, 182, 212, 1)) !important;
+}
+.space-placeholder {
+    background: radial-gradient(circle at center, rgba(6, 182, 212, 0.25) 0%, transparent 70%) !important;
+}
+
+/* 11. Conversor Universal (Orange) */
+.convert-placeholder .neon-icon-badge {
+    color: #f97316 !important;
+    border: 2px solid #f97316 !important;
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.85), inset 0 0 18px rgba(249, 115, 22, 0.45) !important;
+    filter: drop-shadow(0 0 15px rgba(249, 115, 22, 1)) !important;
+}
+.convert-placeholder {
+    background: radial-gradient(circle at center, rgba(249, 115, 22, 0.25) 0%, transparent 70%) !important;
+}
+
+/* 12. Portfolio Personal (Violet) */
+.portfolio-placeholder .neon-icon-badge {
+    color: #8b5cf6 !important;
+    border: 2px solid #8b5cf6 !important;
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.85), inset 0 0 18px rgba(139, 92, 246, 0.45) !important;
+    filter: drop-shadow(0 0 15px rgba(139, 92, 246, 1)) !important;
+}
+.portfolio-placeholder {
+    background: radial-gradient(circle at center, rgba(139, 92, 246, 0.25) 0%, transparent 70%) !important;
+}
+
 /* Card Hover Accent Border Glows */
 .project-card:has(.tourism-placeholder):hover {
     border-color: rgba(0, 242, 254, 0.6);
@@ -615,6 +711,36 @@ ul {
 .project-card:has(.security-placeholder):hover {
     border-color: rgba(34, 197, 94, 0.6);
     box-shadow: 0 10px 30px rgba(34, 197, 94, 0.25);
+}
+
+.project-card:has(.cv-placeholder):hover {
+    border-color: rgba(245, 158, 11, 0.6);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.25);
+}
+
+.project-card:has(.hacker-placeholder):hover {
+    border-color: rgba(220, 38, 38, 0.6);
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.25);
+}
+
+.project-card:has(.space-placeholder):hover {
+    border-color: rgba(6, 182, 212, 0.6);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.25);
+}
+
+.project-card:has(.upscale-placeholder):hover {
+    border-color: rgba(99, 102, 241, 0.6);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25);
+}
+
+.project-card:has(.convert-placeholder):hover {
+    border-color: rgba(249, 115, 22, 0.6);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.25);
+}
+
+.project-card:has(.portfolio-placeholder):hover {
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.25);
 }
 
 .project-card:has(.server-placeholder):hover {
@@ -987,6 +1113,8 @@ ul {
     gap: 2rem;
     max-width: 900px;
     margin: 0 auto;
+    width: 100%;
+    min-width: 0;
 }
 
 .contact-card {
@@ -996,6 +1124,27 @@ ul {
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition);
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.contact-card p {
+    word-break: break-word;
+}
+
+@media (max-width: 700px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
 }
 
 .contact-card:hover {
@@ -2034,6 +2183,36 @@ ul {
 .traductor-status {
     color: #10b981;
     font-weight: 600;
+}
+
+.cvs-icon {
+    color: #f59e0b !important;
+    filter: drop-shadow(0 0 14px rgba(245, 158, 11, 0.5)) !important;
+}
+
+.hacker-icon {
+    color: #dc2626 !important;
+    filter: drop-shadow(0 0 14px rgba(220, 38, 38, 0.5)) !important;
+}
+
+.space-icon {
+    color: #06b6d4 !important;
+    filter: drop-shadow(0 0 14px rgba(6, 182, 212, 0.5)) !important;
+}
+
+.upscale-icon {
+    color: #6366f1 !important;
+    filter: drop-shadow(0 0 14px rgba(99, 102, 241, 0.5)) !important;
+}
+
+.convert-icon {
+    color: #f97316 !important;
+    filter: drop-shadow(0 0 14px rgba(249, 115, 22, 0.5)) !important;
+}
+
+.portfolio-icon {
+    color: #8b5cf6 !important;
+    filter: drop-shadow(0 0 14px rgba(139, 92, 246, 0.5)) !important;
 }
 
 @media (max-width: 992px) {

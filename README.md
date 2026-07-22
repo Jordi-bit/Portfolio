@@ -1,10 +1,10 @@
-# Jordi Martin - Portfolio Personal
+# Portfolio Personal - Junior Software Developer
 
-Portfolio personal como **Junior Software Developer**, diseñado con Python y Django.
+Portfolio personal diseñado con Python y Django.
 
 ## Sobre mí
 
-Profesional con más de 20 años de experiencia laboral que ha reorientado su carrera hacia el sector tecnológico mediante formación, proyectos propios y aprendizaje continuo.
+Profesional con amplia experiencia laboral que ha reorientado su carrera hacia el sector tecnológico mediante formación, proyectos propios y aprendizaje continuo.
 
 **Formación:**
 - Certificado Profesional Nivel 3 - Programación
@@ -25,25 +25,23 @@ Profesional con más de 20 años de experiencia laboral que ha reorientado su ca
 ## Proyectos destacados
 
 - **Raspberry Pi Home Server Lab** — Servidor web propio (Python, Django, Nginx, Docker)
-- **GeoMedia** — Gestión de fotografías y vídeos con geolocalización
-- **Kits Arcade** — [kits-arcade.4004c.com](https://www.kits-arcade.4004c.com)
+- **TourismMap** — Gestión de fotografías y vídeos con geolocalización
+- **Kits Arcade** — Sistema arcade y emulación clásica
 - **CyberSecurity Tree** — Categorización de vulnerabilidades y defensa
-
-## Mi laboratorio personal
-
-Servidor self-hosted corriendo sobre Raspberry Pi 3B+ con Linux, Docker, Nginx, HTTPS y dominio propio `4004c.com`.
-
-## Canal de YouTube
-
-Comparto contenido sobre programación, ciberseguridad e inteligencia artificial aplicada al desarrollo.
-
-👉 [Visitar canal](https://www.youtube.com/@JORDI-l1c)
+- **Drone Mission Planner** — Planificación de rutas para DJI Tello
+- **Football Match Prediction Engine** — Predicción de resultados con TensorFlow
+- **Traductor 1000 palabras** — Aplicación de traducción con repaso inteligente
+- **Gestión de CVs / Ducky** — Gestor de currículum vitae con Django
+- **Hacker-Audit** — Panel de auditoría de seguridad ofensiva
+- **Space Invaders** — Clon del clásico arcade en Pygame
+- **Escalado de Imágenes** — Superresolución con Real-ESRGAN
+- **Conversor Universal** — Conversión de archivos multimedia
 
 ## Contacto
 
-- **Email:** bitcurso3@gmail.com
-- **LinkedIn:** [Jordi Martin](https://www.linkedin.com/in/jordi-martin-/)
-- **GitHub:** [@Jordi-bit](https://github.com/Jordi-bit)
+- **Email:** contacto@ejemplo.com
+- **LinkedIn:** [Perfil profesional](https://linkedin.com/in/tu-perfil)
+- **GitHub:** [@tu-usuario](https://github.com/tu-usuario)
 
 ## Tecnologías del proyecto
 
@@ -59,7 +57,7 @@ Construido con:
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/Jordi-bit/Portfolio.git
+git clone https://github.com/tu-usuario/Portfolio.git
 cd Portfolio
 
 # 2. Activar el entorno virtual
@@ -81,7 +79,3 @@ Abrir en el navegador: http://127.0.0.1:8000/
 # En la Raspberry Pi, tras clonar el repositorio:
 docker-compose up -d --build
 ```
-
-## Demo
-
-https://tuweb.com
