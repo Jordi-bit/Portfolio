@@ -870,7 +870,17 @@ ul {
 .project-links {
     margin-top: auto;
     display: flex;
-    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.project-links .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    white-space: nowrap;
 }
 
 .github-more {
@@ -1352,6 +1362,20 @@ ul {
         gap: 1.5rem;
     }
 
+    .project-content {
+        padding: 1.25rem 1rem;
+    }
+
+    .project-links {
+        gap: 0.5rem;
+    }
+
+    .project-links .btn {
+        flex: 1 1 auto;
+        font-size: 0.82rem;
+        padding: 0.5rem 0.75rem;
+    }
+
     .traductor-diagram,
     .drone-diagram,
     .football-diagram,
@@ -1564,6 +1588,16 @@ ul {
 @media (max-width: 480px) {
     .container {
         padding: 0 1rem;
+    }
+
+    .project-content {
+        padding: 1.1rem 0.85rem;
+    }
+
+    .project-links .btn {
+        flex: 1 1 auto;
+        padding: 0.5rem 0.65rem;
+        font-size: 0.8rem;
     }
 
     .prob-row {
