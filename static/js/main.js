@@ -165,16 +165,29 @@ var currentModalPage = 1;
 var currentModalFolder = '';
 var currentModalName = '';
 
+function getGalleryImages(folder) {
+    var galleries = window.PROJECT_GALLERIES || {};
+    if (galleries[folder] && galleries[folder].length > 0) {
+        return galleries[folder];
+    }
+    return ['/static/images/construccion.jpg'];
+}
+
 function mostrarModalImagenes(projectName, folder, page) {
     currentModalName = projectName;
     currentModalFolder = folder;
     currentModalPage = page || 1;
 
     document.getElementById('modal-project-title').textContent = projectName;
+
+    var images = getGalleryImages(folder);
+    var isPlaceholder = images.length === 1 && images[0].indexOf('construccion.jpg') !== -1;
+
+    document.getElementById('modal-caption').textContent = isPlaceholder
+        ? (folder === 'certificados' ? 'Certificado - Imagen próximamente' : 'Galería de imágenes próximamente')
+        : (projectName + ' - Captura ' + currentModalPage);
+
     cargarImagenModal();
-    document.getElementById('modal-caption').textContent = folder === 'certificados'
-        ? 'Certificado - Imagen próximamente'
-        : 'Galería de imágenes próximamente';
 
     const modal = document.getElementById('image-modal');
     modal.classList.add('visible');
@@ -183,52 +196,38 @@ function mostrarModalImagenes(projectName, folder, page) {
 
 function cargarImagenModal() {
     var img = document.getElementById('modal-project-image');
-    var page = currentModalPage;
-    var folder = currentModalFolder;
-    var triedPng = false;
+    var images = getGalleryImages(currentModalFolder);
+
+    if (currentModalPage < 1) currentModalPage = 1;
+    if (currentModalPage > images.length) currentModalPage = images.length;
+
+    var currentSrc = images[currentModalPage - 1];
 
     img.onerror = function() {
-        if (!triedPng) {
-            triedPng = true;
-            this.src = '/static/images/' + folder + '/captura' + page + '.png';
-        } else {
-            this.src = '/static/images/construccion.jpg';
-            this.onerror = null;
-        }
+        this.src = '/static/images/construccion.jpg';
+        this.onerror = null;
     };
 
-    img.src = '/static/images/' + folder + '/captura' + page + '.jpg';
+    img.src = currentSrc;
 
     document.getElementById('btn-anterior').style.display = currentModalPage <= 1 ? 'none' : 'flex';
-    document.getElementById('modal-page-indicator').textContent = 'Imagen ' + currentModalPage;
+    document.getElementById('btn-siguiente').style.display = currentModalPage >= images.length ? 'none' : 'flex';
 
-    verificarSiguienteImagen();
-}
-
-function verificarSiguienteImagen() {
-    var nextPage = currentModalPage + 1;
-    var folder = currentModalFolder;
-    var probe = new Image();
-
-    probe.onload = function() {
-        document.getElementById('btn-siguiente').style.display = 'flex';
-    };
-    probe.onerror = function() {
-        var probe2 = new Image();
-        probe2.onload = function() {
-            document.getElementById('btn-siguiente').style.display = 'flex';
-        };
-        probe2.onerror = function() {
-            document.getElementById('btn-siguiente').style.display = 'none';
-        };
-        probe2.src = '/static/images/' + folder + '/captura' + nextPage + '.png';
-    };
-    probe.src = '/static/images/' + folder + '/captura' + nextPage + '.jpg';
+    var isPlaceholder = images.length === 1 && images[0].indexOf('construccion.jpg') !== -1;
+    if (isPlaceholder) {
+        document.getElementById('modal-page-indicator').textContent = 'Imagen 1 de 1';
+    } else {
+        document.getElementById('modal-page-indicator').textContent = 'Imagen ' + currentModalPage + ' de ' + images.length;
+        document.getElementById('modal-caption').textContent = currentModalName + ' - Captura ' + currentModalPage;
+    }
 }
 
 function siguienteImagen() {
-    currentModalPage++;
-    cargarImagenModal();
+    var images = getGalleryImages(currentModalFolder);
+    if (currentModalPage < images.length) {
+        currentModalPage++;
+        cargarImagenModal();
+    }
 }
 
 function anteriorImagen() {
